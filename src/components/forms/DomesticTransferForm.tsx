@@ -63,10 +63,10 @@ const DomesticTransferForm = (props: Props) => {
         type: "Domestic Transfer",
       });
 
-      toast("Sent", {
+      toast("Declined", {
         position: "bottom-center",
         theme: "colored",
-        type: "info",
+        type: "error",
         bodyClassName: "toast",
       });
 

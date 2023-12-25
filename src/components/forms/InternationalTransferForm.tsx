@@ -73,10 +73,10 @@ const InternationalTransferForm = (props: Props) => {
         type: "International Transfer",
       });
 
-      toast("Sent", {
+      toast("Declined", {
         position: "bottom-center",
         theme: "colored",
-        type: "info",
+        type: "error",
         bodyClassName: "toast",
       });
 
