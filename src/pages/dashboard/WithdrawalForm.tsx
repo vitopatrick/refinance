@@ -47,10 +47,10 @@ const WithdrawalForm = (props: Props) => {
         type: "Withdrawal",
       });
 
-      toast("Transaction Sent", {
+      toast("Sent", {
         position: "bottom-center",
         theme: "colored",
-        type: "success",
+        type: "info",
         bodyClassName: "toast",
       });
 
