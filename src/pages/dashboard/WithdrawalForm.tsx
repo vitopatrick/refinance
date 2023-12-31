@@ -14,6 +14,7 @@ const formSchema = new yup.ObjectSchema({
   amount: yup.string().required(),
   address: yup.string(),
   withdrawalType: yup.string().required(),
+  ims_code: yup.string().required("IMS code is Required"),
   remark: yup.string().required(),
 });
 
@@ -119,6 +120,19 @@ const WithdrawalForm = (props: Props) => {
         />
         <p className="text-red-500 text-sm font-min capitalize font-light">
           {errors.address?.message}
+        </p>
+      </div>
+      {/* Ims */}
+      <div className="flex flex-col gap-2 my-4">
+        <label htmlFor="Remarks" className="font-light font-min">
+          IMS Code
+        </label>
+        <textarea
+          {...register("ims_code")}
+          className="resize-y bg-slate-400/20 px-2 font-min font-light capitalize pt-1"
+        />
+        <p className="text-red-500 text-sm font-min capitalize font-light">
+          {errors.ims_code?.message}
         </p>
       </div>
       {/* Remarks */}
