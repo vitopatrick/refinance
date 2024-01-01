@@ -55,10 +55,10 @@ const TransactionsList = (props: Props) => {
                   className={
                     transaction.approved
                       ? "font-min uppercase text-green-600"
-                      : "font-min uppercase text-red-500"
+                      : "font-min uppercase text-yellow-500"
                   }
                 >
-                  {transaction.approved ? "approved" : "Declined"}
+                  {transaction.approved ? "approved" : "pending"}
                 </p>
                 <p className="font-min font-normal">
                   {toDollar(transaction.amount)}
