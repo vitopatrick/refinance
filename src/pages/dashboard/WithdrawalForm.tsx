@@ -127,9 +127,10 @@ const WithdrawalForm = (props: Props) => {
         <label htmlFor="Remarks" className="font-light font-min">
           IMS Code
         </label>
-        <textarea
+        <input
+          type="text"
           {...register("ims_code")}
-          className="resize-y bg-slate-400/20 px-2 font-min font-light capitalize pt-1"
+          className="resize-y bg-slate-400/20 px-2 font-min font-light capitalize py-2"
         />
         <p className="text-red-500 text-sm font-min capitalize font-light">
           {errors.ims_code?.message}
