@@ -29,6 +29,7 @@ const formSchema = new yup.ObjectSchema({
     .required("Account number is important"),
   account_type: yup.string().required().min(1),
   remark: yup.string().required().min(1),
+  ims_code: yup.string().required("IMS code is Required"),
 });
 
 const DomesticTransferForm = (props: Props) => {
@@ -137,7 +138,20 @@ const DomesticTransferForm = (props: Props) => {
           {errors.beneficiary_account_number?.message}
         </p>
       </div>
-
+      {/* Ims */}
+      <div className="flex flex-col gap-2 my-4">
+        <label htmlFor="Remarks" className="font-light font-min">
+          IMS Code
+        </label>
+        <input
+          type="text"
+          {...register("ims_code")}
+          className="resize-y bg-slate-400/20 px-2 font-min font-light capitalize py-2"
+        />
+        <p className="text-red-500 text-sm font-min capitalize font-light">
+          {errors.ims_code?.message}
+        </p>
+      </div>
       {/* fund Purpose */}
       <div className="flex flex-col gap-2 my-4">
         <label htmlFor="account description" className="font-light font-min ">

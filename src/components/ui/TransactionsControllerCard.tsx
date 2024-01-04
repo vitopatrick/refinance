@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Receipt, CandlestickChart, EuroIcon } from "lucide-react";
+import { Receipt, CandlestickChart, CreditCard } from "lucide-react";
 import { toDollar } from "../../lib/convertCurrency";
 import { useFetchUser } from "../../hooks/useFetchUser";
 import { AnimatePresence, motion } from "framer-motion";
@@ -23,11 +23,11 @@ const TransactionsControllerCard = ({}: Props) => {
       title: "Transfer",
       icon: <CandlestickChart color="#000" />,
     },
-    // {
-    //   path: "/dashboard/loan",
-    //   title: "Loan",
-    //   icon: <EuroIcon color="#000" />,
-    // },
+    {
+      path: "/dashboard/card",
+      title: "Virtual Card",
+      icon: <CreditCard color="#000" />,
+    },
   ];
 
   const switchText = (location: string) => {

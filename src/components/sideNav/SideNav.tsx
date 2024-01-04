@@ -37,11 +37,11 @@ const links = [
     title: "Transfer",
     icon: <CandlestickChart />,
   },
-  // {
-  //   path: "card",
-  //   title: "Virtual Card",
-  //   icon: <CreditCard />,
-  // },
+  {
+    path: "card",
+    title: "Virtual Card",
+    icon: <CreditCard />,
+  },
   {
     path: "withdraw",
     title: "Withdraw",

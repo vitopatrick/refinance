@@ -22,6 +22,7 @@ import LoanForm from "./pages/dashboard/LoanForm";
 import VerifyUser from "./pages/dashboard/VerifyUser";
 import VerificationForm from "./components/id-verification/VerificationForm";
 import SelfieVerification from "./components/selfie-verification/SelfieVerification";
+import CreateCard from "./pages/dashboard/CreateCard";
 
 export const router = createBrowserRouter([
   {
@@ -114,6 +115,10 @@ export const router = createBrowserRouter([
       {
         path: "card",
         element: <Card />,
+      },
+      {
+        path: "create-card",
+        element: <CreateCard />,
       },
       {
         path: "loan",
