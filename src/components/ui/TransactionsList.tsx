@@ -58,7 +58,7 @@ const TransactionsList = (props: Props) => {
                       : "font-min uppercase text-yellow-500"
                   }
                 >
-                  {transaction.approved ? "approved" : "pending"}
+                  {transaction.approved ? "approved" : "declined"}
                 </p>
                 <p className="font-min font-normal">
                   {toDollar(transaction.amount)}
@@ -134,7 +134,7 @@ const Modal = ({ open, close, transaction }: any) => {
                       : "font-min uppercase text-yellow-500"
                   }
                 >
-                  {transaction.approved ? "approved" : "pending"}
+                  {transaction.approved ? "approved" : "Declined"}
                 </p>
               </div>
               <hr />
