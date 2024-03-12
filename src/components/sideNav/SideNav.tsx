@@ -47,11 +47,11 @@ const links = [
     title: "Withdraw",
     icon: <ArrowDownToLine />,
   },
-  // {
-  //   path: "loan",
-  //   title: "Loan",
-  //   icon: <EuroIcon />,
-  // },
+  {
+    path: "loan",
+    title: "Loan",
+    icon: <EuroIcon />,
+  },
 ];
 
 const SideNav = ({ isBarOpen }: controls) => {
