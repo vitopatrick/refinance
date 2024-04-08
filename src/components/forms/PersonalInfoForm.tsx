@@ -25,7 +25,7 @@ const PersonalInfoForm = ({ updateFn, formState, errors }: formState) => {
       <div className="text-center flex items-center justify-center">
         <h4 className="font-min py-3 text-yellow-100 font-light">
           Open an account with{" "}
-          <span className="font-regular underline">International Neo Bank</span>
+          <span className="font-regular underline">International Leo Bank</span>
         </h4>
       </div>
       {/* Full Name input */}
