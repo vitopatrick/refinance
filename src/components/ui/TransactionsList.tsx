@@ -45,8 +45,11 @@ const TransactionsList = (props: Props) => {
               className="flex justify-between mt-[2rem] px-2 py-4 rounded bg-blue-50/40"
             >
               <div>
-                <h3 className="font-min text-blue-800">
-                  {transaction.remark.substr(0, 18)}...
+                <h3 className="font-min text-blue-800 capitalize">
+                  {transaction.remark
+                    ? transaction.remark.substr(0, 18)
+                    : "No Remarks"}
+                  ...
                 </h3>
                 <p className="font-light font-min">{transaction.date}</p>
               </div>
@@ -58,7 +61,7 @@ const TransactionsList = (props: Props) => {
                       : "font-min uppercase text-yellow-500"
                   }
                 >
-                  {transaction.approved ? "approved" : "declined"}
+                  {transaction.approved ? "approved" : "pending"}
                 </p>
                 <p className="font-min font-normal">
                   {toDollar(transaction.amount)}
@@ -74,8 +77,6 @@ const TransactionsList = (props: Props) => {
 
 const Modal = ({ open, close, transaction }: any) => {
   let status = false;
-
-  console.log(transaction);
 
   return (
     <AnimatePresence>
@@ -134,7 +135,7 @@ const Modal = ({ open, close, transaction }: any) => {
                       : "font-min uppercase text-yellow-500"
                   }
                 >
-                  {transaction.approved ? "approved" : "Declined"}
+                  {transaction.approved ? "approved" : "pending"}
                 </p>
               </div>
               <hr />
