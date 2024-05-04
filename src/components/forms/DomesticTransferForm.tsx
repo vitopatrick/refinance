@@ -127,7 +127,7 @@ const DomesticTransferForm = (props: Props) => {
       {/* Beneficiary Account number */}
       <div className="flex flex-col gap-2 my-4">
         <label htmlFor="full name" className="font-light font-min">
-          Beneficiary Account Name
+          Beneficiary Account Number
         </label>
         <input
           type="text"
