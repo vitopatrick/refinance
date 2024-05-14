@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        main: ["Poppins", "sans-serif"],
-        min: ["Josefin Sans", "sans-serif"],
+        main: [ "Outfit", "sans-serif"],
+        min: [ "Outfit", "sans-serif"],
       },
     },
   },

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { faker } from "@faker-js/faker";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -14,33 +14,21 @@ import PersonalInfoForm from "../components/forms/PersonalInfoForm";
 import ResidenceForm from "../components/forms/ResidenceForm";
 import AccountInfoForm from "../components/forms/AccountInfoForm";
 import FormHeader from "../components/ui/FormHeader";
+import { z } from "zod";
 
 type Props = {};
 
-export type FormState = {
-  occupation?: string | undefined;
-  name: string;
-  email: string;
-  phone_number: string;
-  password: string;
-  address: string;
-  zipCode: string;
-  country: string;
-  accountType: string;
-  accountDescription: string;
-};
-
-const formSchema = new yup.ObjectSchema({
-  name: yup.string().required(),
-  email: yup.string().email().required(),
-  occupation: yup.string(),
-  phone_number: yup.string().required("Phone Number is Required"),
-  password: yup.string().required().min(6),
-  address: yup.string().required(),
-  zipCode: yup.string().required("Enter your regional zip code"),
-  country: yup.string().required(),
-  accountType: yup.string().required("Please select an account type"),
-  accountDescription: yup.string().required("Description is required"),
+const formSchema = z.object({
+  name: z.string().min(0, { message: "Please Enter Name" }),
+  email: z.string().email(),
+  occupation: z.string(),
+  phone_number: z.string(),
+  password: z.string().min(6),
+  address: z.string(),
+  zipCode: z.string(),
+  country: z.string(),
+  accountType: z.string(),
+  accountDescription: z.string(),
 });
 
 const Register = (props: Props) => {
@@ -54,15 +42,13 @@ const Register = (props: Props) => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    mode: "onSubmit",
-    reValidateMode: "onChange",
-    resolver: yupResolver(formSchema),
+    resolver: zodResolver(formSchema),
   });
 
   let accountNumber = faker.finance.accountNumber();
 
   // submit to firebase
-  const submitTofirebase = async (formValue: FormState) => {
+  const submitTofirebase = async (formValue: any) => {
     try {
       // submit to firebase
       const { user } = await createUserWithEmailAndPassword(

@@ -6,7 +6,7 @@ const reviews = [
   {
     id: 1,
     review:
-      "For more than two decades I've been banking with International leo Bank. To me the customer service is top notch you know.",
+      "For more than two decades I've been banking with refinance Bank. To me the customer service is top notch you know.",
     name: "Adele Lucy",
     avatar: "https://internationalneo.online/people/pic5.jpeg",
     position: "Courier",
@@ -14,7 +14,7 @@ const reviews = [
   {
     id: 2,
     review:
-      "One thing very outstanding about International leo Bank is the loan programm. For once I paid back a loan without being under pressure.",
+      "One thing very outstanding about refinance Bank is the loan programm. For once I paid back a loan without being under pressure.",
     name: "John Smith",
     avatar: "https://internationalneo.online/people/pic2.jpeg",
     position: "Event Planner",
@@ -137,7 +137,7 @@ const ApplyForAnAccount = () => {
         Apply for an account in minutes
       </h3>
       <p className="text-center text-white font-min  font-light">
-        Get your International leo Bank account today!
+        Get your refinance Bank account today!
       </p>
       <Link
         to="/register"
