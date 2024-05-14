@@ -1,8 +1,8 @@
-const pictures = [
-  "https://internationalneo.online/bg/14.jpg",
-  "https://internationalneo.online/bg/23.jpg",
-  "https://internationalneo.online/bg/26.jpg",
-];
+// const pictures = [
+//   "https://internationalneo.online/bg/14.jpg",
+//   "https://internationalneo.online/bg/23.jpg",
+//   "https://internationalneo.online/bg/26.jpg",
+// ];
 
 const CareersExplained = () => {
   return (
@@ -11,7 +11,7 @@ const CareersExplained = () => {
       <div className="mx-auto w-[90%] p-4">
         {/* header */}
         <h4 className="text-blue-500 font-min text-3xl underline">
-          refinance Bank Careers
+          Refinance Bank Careers
         </h4>
         {/* body */}
         <p className="font-min text-blue-50 font-light my-[2rem] leading-loose">
@@ -40,13 +40,13 @@ const Images = () => {
   return (
     <div>
       {/* image grid */}
-      <div className="md:grid grid-cols-1 md:grid-cols-3 gap-[4rem] md:gap-[2rem]">
+      {/* <div className="md:grid grid-cols-1 md:grid-cols-3 gap-[4rem] md:gap-[2rem]">
         {pictures.map((image) => (
           <div key={image}>
             <img src={image} className="h-full w-full rounded-md" />
           </div>
         ))}
-      </div>
+      </div> */}
       {/* more write up */}
       <p className="font-min font-light text-white my-[2rem] leading-loose">
         Our self-service options can help you easily access the information

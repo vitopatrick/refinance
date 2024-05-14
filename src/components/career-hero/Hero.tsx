@@ -2,7 +2,8 @@ const Hero = () => {
   return (
     <div
       style={{
-        background: "url('https://internationalneo.online/bg/28.jpg')",
+        background:
+          "url('https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
         backgroundPosition: "center center",
       }}
       className="h-[60vh]"
