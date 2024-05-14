@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
-const formSchema = new yup.ObjectSchema({
+const formSchema = yup.object({
   amount: yup.string().required(),
   address: yup.string(),
   withdrawalType: yup.string().required(),

@@ -16,7 +16,7 @@ type UserDetails = {
 };
 
 // form schema
-const schema = new yup.ObjectSchema({
+const schema = yup.object({
   email: yup.string().email().required(),
   password: yup.string().min(6).required(),
 });

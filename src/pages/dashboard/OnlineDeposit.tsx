@@ -8,7 +8,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const formSchema = new yup.ObjectSchema({
+const formSchema = yup.object({
   amount: yup.string().required().min(0),
   remarks: yup.string().required(),
 });

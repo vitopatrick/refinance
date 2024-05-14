@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
 
-const formSchema = new yup.ObjectSchema({
+const formSchema = yup.object({
   card_type: yup.string().required("Please choose your type of card").min(0),
   request_reason: yup
     .string()

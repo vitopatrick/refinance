@@ -18,7 +18,7 @@ type Props = {};
 //   "Premium Leo Account",
 // ];
 
-const formSchema = new yup.ObjectSchema({
+const formSchema = yup.object({
   amount: yup.string().required().min(1),
   beneficiary_name: yup
     .string()

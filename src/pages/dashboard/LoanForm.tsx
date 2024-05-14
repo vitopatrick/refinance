@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { db } from "../../firebase";
 
-const formSchema = new yup.ObjectSchema({
+const formSchema = yup.object({
   amount: yup.string().required().min(0),
   reason_for_loan: yup.string().required("Select Reason"),
 });
