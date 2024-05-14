@@ -7,14 +7,17 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBQrzY8NnRfdiOhaM_0NMk_EqYbV3SeIA8",
-  authDomain: "internationalleo-d5383.firebaseapp.com",
-  projectId: "internationalleo-d5383",
-  storageBucket: "internationalleo-d5383.appspot.com",
-  messagingSenderId: "379525664289",
-  appId: "1:379525664289:web:c75cfa710e6feb9a025d60",
+  apiKey: "AIzaSyDfGJywdOJU0hs99k7Oo1U4V88UDbV7pHw",
+  authDomain: "refinance-fd2ed.firebaseapp.com",
+  projectId: "refinance-fd2ed",
+  storageBucket: "refinance-fd2ed.appspot.com",
+  messagingSenderId: "454666913694",
+  appId: "1:454666913694:web:5f21c0a2727898eae7b88f",
 };
+
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
