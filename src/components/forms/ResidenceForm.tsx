@@ -1,28 +1,28 @@
 import { Dispatch, SetStateAction } from "react";
-import { FormState } from "../../pages/Register";
+// import { FormState } from "../../pages/Register";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
 import { useFetchCountry } from "../../hooks/useCountry";
 
-type formState = {
-  updateFn: Dispatch<SetStateAction<number>>;
-  formState: UseFormRegister<FormState>;
-  errors: FieldErrors<FormState>;
-};
+// type formState = {
+//   updateFn: Dispatch<SetStateAction<number>>;
+//   formState: UseFormRegister<FormState>;
+//   errors: FieldErrors<FormState>;
+// };
 
-const ResidenceForm = ({ updateFn, formState, errors }: formState) => {
+const ResidenceForm = ({ updateFn, formState, errors }: any) => {
   // use country hook
   const { countries }: any = useFetchCountry();
 
   const moveToNextForm = (e: any) => {
     e.preventDefault();
 
-    updateFn((prev) => prev + 1);
+    updateFn((prev: any) => prev + 1);
   };
 
   const moveToPrevForm = (e: any) => {
     e.preventDefault();
 
-    updateFn((prev) => prev - 1);
+    updateFn((prev: any) => prev - 1);
   };
 
   return (

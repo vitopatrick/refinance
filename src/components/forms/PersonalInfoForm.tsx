@@ -2,19 +2,19 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
 
 import { Eye, EyeOff } from "lucide-react";
-import { FormState } from "../../pages/Register";
+// import { FormState } from "../../pages/Register";
 
-type formState = {
-  updateFn: Dispatch<SetStateAction<number>>;
-  formState: UseFormRegister<FormState>;
-  errors: FieldErrors<FormState>;
-};
+// type formState = {
+//   updateFn: Dispatch<SetStateAction<number>>;
+//   formState: UseFormRegister<FormState>;
+//   errors: FieldErrors<FormState>;
+// };
 
-const PersonalInfoForm = ({ updateFn, formState, errors }: formState) => {
+const PersonalInfoForm = ({ updateFn, formState, errors }: any) => {
   // move to the next form
   const moveToNextForm = (e: any) => {
     e.preventDefault();
-    updateFn((prev) => prev + 1);
+    updateFn((prev: any) => prev + 1);
   };
 
   const [isText, setIsText] = useState(false);

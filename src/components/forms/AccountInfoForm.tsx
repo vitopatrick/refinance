@@ -1,14 +1,14 @@
 import { Dispatch, SetStateAction } from "react";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
-import { FormState } from "../../pages/Register";
+// import { FormState } from "../../pages/Register";
 
-type formState = {
-  updateFn: Dispatch<SetStateAction<number>>;
-  formState: UseFormRegister<FormState>;
-  errors: FieldErrors<FormState>;
-};
+// type formState = {
+//   updateFn: Dispatch<SetStateAction<number>>;
+//   formState: UseFormRegister<FormState>;
+//   errors: FieldErrors<FormState>;
+// };
 
-const AccountInfoForm = ({ updateFn, formState, errors }: formState) => {
+const AccountInfoForm = ({ updateFn, formState, errors }: any) => {
   // account type options
   const accountTypeOptions = [
     "Checking Account",
@@ -20,7 +20,7 @@ const AccountInfoForm = ({ updateFn, formState, errors }: formState) => {
   const moveToPrevForm = (e: any) => {
     e.preventDefault();
 
-    updateFn((prev) => prev - 1);
+    updateFn((prev: any) => prev - 1);
   };
 
   return (
