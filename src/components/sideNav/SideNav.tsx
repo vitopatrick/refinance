@@ -69,12 +69,12 @@ const SideNav = ({ isBarOpen }: controls) => {
 
   return (
     <>
-      <div className="space-y-[2rem] w-[250px] bg-slate-900 md:block hidden ">
+      <div className="space-y-[2rem] w-[200px] bg-slate-900 md:block hidden ">
         {links.map((link) => (
           <Link
             to={link.path}
             key={link.title}
-            className="text-blue-50 flex gap-3 items-center  font-min font-light hover:bg-blue-900 rounded p-4 transition-all ease-in"
+            className="text-blue-50 flex gap-3 items-center  font-min font-light hover:bg-blue-900 rounded px-2 py-3 transition-all ease-in"
           >
             <span>{link.icon}</span>
             <p>{link.title}</p>
