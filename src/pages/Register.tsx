@@ -66,6 +66,7 @@ const Register = (props: Props) => {
         loanBalance: 0,
         verified: false,
         accountNumber: accountNumber,
+        bank_routing_number: 0,
       });
 
       toast.success("Auth Successful", {

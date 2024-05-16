@@ -6,6 +6,8 @@ type Props = {};
 const AccountSummary = (props: Props) => {
   const { userState: user }: any = useFetchUser();
 
+  console.log(user);
+
   return (
     <div className="p-3 w-full bg-gray-50 rounded border border-slate-900/20">
       {/* text */}
@@ -35,13 +37,19 @@ const AccountSummary = (props: Props) => {
               <p>{user.accountNumber}</p>
             </div>
             <div className="flex items-center justify-between">
+              <h3 className="tracking-wide text-gray-500">
+                Bank Routing Number
+              </h3>
+              <p>{user.bank_routing_number}</p>
+            </div>
+            <div className="flex items-center justify-between">
               <h3 className="tracking-wide text-gray-500">Status</h3>
               <Link
                 to="/dashboard/verify-user"
                 className={
                   user.verified
-                    ? "bg-green-600/50 px-6  font-light  py-2 rounded-full"
-                    : "bg-red-500/50 px-6  font-light  py-2 rounded-full"
+                    ? "bg-green-600/50 px-6  font-light  py-1 rounded-full"
+                    : "bg-red-500/50 px-6  font-light  py-1 rounded-full"
                 }
               >
                 {user.verified ? "Verified" : "Not Verified"}
