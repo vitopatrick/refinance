@@ -11,7 +11,7 @@ const CareersExplained = () => {
       <div className="mx-auto w-[90%] p-4">
         {/* header */}
         <h4 className="text-blue-500 font-min text-3xl underline">
-          Refinance Bank Careers
+          Neo Stream Bank Careers
         </h4>
         {/* body */}
         <p className="font-min text-blue-50 font-light my-[2rem] leading-loose">
@@ -19,7 +19,7 @@ const CareersExplained = () => {
           face of generic products offered by the management. Customer care is a
           cornerstone of the bank’s long term competitive advantage. First
           Chartered Bank explicitly speaks of our bank’s customer centric focus.
-          Thus, our business in refinance Bank is centered on our customers and
+          Thus, our business in Neo Stream Bank is centered on our customers and
           their ultimate satisfaction.
         </p>
         <p className="font-min text-blue-50 font-light my-[2rem] leading-loose">

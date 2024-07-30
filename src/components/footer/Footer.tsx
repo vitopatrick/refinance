@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex justify-between items-center gap-4 flex-col md:flex-row">
           <div className="flex-1">
             <p className="text-blue-400 font-min leading-loose font-light capitalize text-sm text-center md:text-left">
-              refinance Bank is subsidiary of Belfius Bank & issuer of Debt
+              Neo Stream Bank is subsidiary of Belfius Bank & issuer of Debt
               instruments. We are a privately operates personal and business
               banking, including Internet Banking services based in the Belgium
               with operations all over the world and managed by security

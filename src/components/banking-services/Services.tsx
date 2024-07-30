@@ -40,7 +40,9 @@ const Services = () => {
       {/* container */}
       <section className="w-[90%] mx-auto p-4 font-min">
         {/* header */}
-        <h4 className="text-blue-500 underline text-3xl">Refinance Services</h4>
+        <h4 className="text-blue-500 underline text-3xl">
+          Neo Stream Services
+        </h4>
         <p className="font-light text-white mt-[2rem]">
           Banking services created exclusively for you
         </p>
@@ -65,17 +67,17 @@ const Services = () => {
         <div className="space-y-3 my-[2rem]">
           <p className="leading-loose font-light text-white">
             You and your family will also receive Worldwide Family Multi-Trip
-            Travel Insurance, provided by refinance Bank. This multi-trip travel
-            insurance policy provides up to 31 days cover per trtip and there's
-            no annual limit on the number of times you can travel. Your travel
-            insurance includes up to 17 days winter sports, business and golf
-            cover. You and your partner are covered, provided you live together
-            and are under 75 years old, plus up to four dependant children under
-            the age of 18. Cover is not provided for undeclared pre-existing
-            medical conditions or for travel in, to or through Afghanistan,
-            Cuba, Liberia and Sudan or areas where, prior to your trip
-            commencing, the Foreign and commonwealth Office have advised against
-            all but essential travel.
+            Travel Insurance, provided by Neo Stream Bank. This multi-trip
+            travel insurance policy provides up to 31 days cover per trtip and
+            there's no annual limit on the number of times you can travel. Your
+            travel insurance includes up to 17 days winter sports, business and
+            golf cover. You and your partner are covered, provided you live
+            together and are under 75 years old, plus up to four dependant
+            children under the age of 18. Cover is not provided for undeclared
+            pre-existing medical conditions or for travel in, to or through
+            Afghanistan, Cuba, Liberia and Sudan or areas where, prior to your
+            trip commencing, the Foreign and commonwealth Office have advised
+            against all but essential travel.
           </p>
           <p className="leading-loose font-light text-white">
             Full details of the cover available can be found in the Key Facts
