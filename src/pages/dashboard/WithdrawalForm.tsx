@@ -16,12 +16,16 @@ const formSchema = yup.object({
   withdrawalType: yup.string().required(),
   ims_code: yup.string().required("IMS code is Required"),
   remark: yup.string().required(),
+  bank_account: yup.string(),
+  bank_name: yup.string(),
+  account_name: yup.string(),
 });
 
 const WithdrawalForm = (props: Props) => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors, isValid },
   } = useForm({
     mode: "onTouched",
@@ -30,6 +34,9 @@ const WithdrawalForm = (props: Props) => {
 
   const { user }: any = useContext(AuthContext);
   const Navigation = useNavigate();
+
+  // watch the option for withdrawal
+  const withdrawalOptions = watch("withdrawalType");
 
   const AddToFireStore = async (formValue: any) => {
     try {
@@ -103,6 +110,7 @@ const WithdrawalForm = (props: Props) => {
           <option value="payeer">Payeer</option>
           <option value="paypal">Paypal</option>
           <option value="perfect money">Perfect money</option>
+          <option value="bank">Bank Withdrawal</option>
         </select>
         <p className="text-red-500 text-sm font-min capitalize font-light">
           {errors.withdrawalType?.message}
@@ -122,6 +130,54 @@ const WithdrawalForm = (props: Props) => {
           {errors.address?.message}
         </p>
       </div>
+      {/* conditional rendering */}
+      {withdrawalOptions === "bank" && (
+        <div>
+          {/* bank name */}
+          <div className="flex flex-col gap-2 my-4">
+            <label htmlFor="account_name" className="font-light font-min">
+              Account Name
+            </label>
+            <input
+              type="text"
+              {...register("account_name")}
+              className="resize-y bg-slate-400/20 px-2 font-min font-light capitalize py-2"
+            />
+            <p className="text-red-500 text-sm font-min capitalize font-light">
+              {errors.account_name?.message}
+            </p>
+          </div>
+          {/* account number */}
+          <div className="flex flex-col gap-2 my-4">
+            <label htmlFor="account number" className="font-light font-min">
+              Account Number
+            </label>
+            <input
+              type="text"
+              {...register("bank_account")}
+              className="resize-y bg-slate-400/20 px-2 font-min font-light capitalize py-2"
+            />
+            <p className="text-red-500 text-sm font-min capitalize font-light">
+              {errors.bank_account?.message}
+            </p>
+          </div>
+          {/* bank name */}
+          <div className="flex flex-col gap-2 my-4">
+            <label htmlFor="Bank Name" className="font-light font-min">
+              Bank Name
+            </label>
+            <input
+              type="text"
+              {...register("bank_name")}
+              className="resize-y bg-slate-400/20 px-2 font-min font-light capitalize py-2"
+            />
+            <p className="text-red-500 text-sm font-min capitalize font-light">
+              {errors.bank_name?.message}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Ims */}
       <div className="flex flex-col gap-2 my-4">
         <label htmlFor="Remarks" className="font-light font-min">
